@@ -1,0 +1,181 @@
+﻿@media only screen and (max-width: 500px) {
+    /* STYLES HERE for DEVICES with physical max-screen width of 480px */
+    #sendContent {
+        display: block;
+        background-color: #B1CDEA;
+        margin-top: 20px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        border: solid 1px #707070;
+        box-shadow: 0 0 5px 1px #969696;
+        position: relative;
+        left: 150px;
+        width: 100px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    #chatContent {
+        display: block;
+        background-color: #FFD2BC;
+        margin-top: 20px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        border: solid 1px #707070;
+        box-shadow: 0 0 5px 1px #969696;
+        width: 100px;
+            -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    }
+}
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#room {
+    display: block;
+    width: 120px;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    background-color: darkslategrey;
+    color: white;
+}
+
+#chatText {
+    border: solid 1px #dcdcdc;
+    transition: box-shadow 0.3s, border 0.3s;
+    height: 30px;
+    width: 500px;
+    height: 100px;
+}
+.container{
+    background-image = url('img/toronto.jpg');
+}
+#indexPage{
+    background-color : aliceblue;
+}
+#cent {
+
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-top:-50px; /* this is half the height of your div*/  
+  margin-left:-100px; /*this is half of width of your div*/
+}
+#send {
+    margin-left: -5px;
+    height: 100px;
+    width: 100px;
+}
+
+#inputs {
+    position: fixed;
+    bottom: 0px;
+     z-index: 999;
+}
+#userButton{
+    visibility : hidden;
+}
+#chatText:focus,
+#chatText.focus {
+    border: solid 1px #707070;
+    box-shadow: 0 0 5px 1px #969696;
+}
+@media only screen and (min-width: 500px) and (max-width: 850px) {
+    #chatContent {
+        display: block;
+        background-color: #FFD2BC;
+        margin-top: 20px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        border: solid 1px #707070;
+        box-shadow: 0 0 0px 1px #969696;
+        width: 400px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    #sendContent {
+        display: block;
+        background-color: #B1CDEA;
+        margin-top: 20px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: solid 1px #707070;
+        box-shadow: 0 0 0px 1px #969696;
+        position: relative;
+        left: 150px;
+        width: 400px;
+        text-align: right;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+}
+@media only screen and (min-width: 850px){
+#chatContent {
+    display: block;
+    background-color: #FFD2BC;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border: solid 1px #707070;
+    box-shadow: 0 0 0px 1px #969696;
+    width: 600px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#sendContent {
+    display: block;
+    background-color: #B1CDEA;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid 1px #707070;
+    box-shadow: 0 0 0px 1px #969696;
+    position: relative;
+    left: 350px;
+    width: 600px;
+    text-align: right;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+}
+

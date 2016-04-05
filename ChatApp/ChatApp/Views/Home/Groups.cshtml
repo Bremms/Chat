@@ -1,0 +1,16 @@
+﻿@model IEnumerable<ChatApp.Models.Room>
+
+@{
+    ViewBag.Title = "Groups";
+}
+<h2>Choose a group</h2>
+@foreach (var item in Model) {
+
+    <a href="@Url.Action("Chat", new { groupname = @item.Name}) "/>
+    <div id="room">
+        @item.Name
+    </div>
+            
+
+}
+

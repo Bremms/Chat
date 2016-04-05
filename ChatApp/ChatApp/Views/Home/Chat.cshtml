@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Chat";
+}
+    <div id="contents"><div id="inputs">
+    <input type="text" id="chatText" placeholder="Type your message here!" />
+    <button id="send"  class="btn btn-default" >Send</button>
+</div>
+    </div>
+
+<script>
+    window.onload = function () {
+        $("footer").hide();
+        var connection = $.connection("/chat");        connection.start().done(function () {
+           
+        });
+        connection.received(function (msg) {
+            if (msg.TypeMessage == 0) {
+                document.cookie = "connection_id=" + msg.Connection_id;
+                $("#contents").append("<div id='chatContent'>" + msg.Sender + "> " + msg.Text + "</div>");
+            }
+            else {
+                if (msg.Connection_id === getCookie("connection_id")) {
+                    $("#contents").append("<div id='sendContent'>" + msg.Text + "</div>");
+                } else {
+                    $("#contents").append("<div id='chatContent'>"+msg.Sender+"> "+ msg.Text + "</div>");
+                }
+                
+            }
+               
+        });        $("#send").click(function () {
+            var text = $("#chatText").val();
+            $("#chatText").val("");
+            connection.send(text);
+        });
+    };
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1);
+            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+        return "";
+    }
+</script>
